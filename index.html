@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/fonts/stylesheet.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'dewi': ['"RF Dewi"'],
+          'dewi-condensed': ['"RF Dewi Condensed"'],
+          'dewi-expanded': ['"RF Dewi Expanded"'],
+          'dewi-extended': ['"RF Dewi Extended"'],
+          'noto-bold': ['"NotoSansBold"'],
+        },
+        listStyleType: {
+          square: 'square'
+        }
+      }
+    }
+  </script>
+  <title>FANSCHAIN</title>
+  <!-- 
+    
+  -->
+</head>
+<body>
+  <main class="w-full h-full overflow-hidden">
+
+    <section class="hero-1 h-screen min-h-[568px]">
+    
+      <header class="flex w-full h-16 px-4 border justify-between items-center">
+        <nav class="flex w-1/3 justify-start">
+          <div class="menu-icon grid items-center h-[22px] w-[22px] cursor-pointer">
+            <span class="line-1 block h-[2px] w-full bg-black"></span>
+            <span class="line-2 block h-[2px] w-10/12 bg-black"></span>
+            <span class="line-3 block h-[2px] w-full bg-black"></span>
+          </div>        
+
+          <!-- 
+            .menu-icon {
+              display: grid;
+              place-items: center;
+              height: 55px;
+              width: 50px;
+              position: relative;
+              cursor: pointer;            
+                & > span {
+                  width: 50px;
+                  height: 3px;
+                  background: red;
+                  display: block;
+                  transition: all 0.3s ease-in-out;
+                }            
+                &:hover span:nth-child(1) {
+                  width: 35px;
+                }
+              
+                &:hover span:nth-child(2) {    
+                  width: 40px;
+                }
+              
+                &.active span:nth-child(1) {
+                  transform-origin: center center;
+                  transform: rotate(-45deg) translate(-12px, 12px);
+                  width: 55px;
+                }
+                
+                &.active span:nth-child(2) {
+                  transform: translateX(10px);
+                  opacity: 0;
+                }
+              
+                &.active span:nth-child(3) {
+                  transform-origin: center center;
+                  transform: rotate(45deg) translate(-15px, -14px);
+                  width: 55px;
+                }
+            
+              .line-1 {
+                width: 42px;
+                justify-self: end;
+              }
+              
+              .line-2 {
+                width: 35px;
+                justify-self: end;
+              }
+
+
+          -->
+        </nav>
+        
+        <div class="flex w-1/3 justify-center">
+          <p class="font-dewi-expanded font-black">FANSCHAIN</p>
+        </div>
+        
+        <div class="flex w-1/3 justify-end">
+          <ul class="flex translate-x-2">
+            <li class="w-6 h-6">
+              <span class="iconify w-full h-full" data-icon="ei:sc-telegram"></span>
+            </li>
+            <li class="w-6 h-6">
+              <span class="iconify w-full h-full" data-icon="ei:sc-twitter"></span>
+            </li>
+            <li class="w-6 h-6">
+              <span class="iconify w-full h-full" data-icon="ei:sc-instagram"></span>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="h-[50%] bg-cover bg-top bg-no-repeat" style="background-image: url('/assets/images/img1_shutterstock_740699494.jpg');">
+        <!-- <img src="/assets/images/img1_shutterstock_740699494.jpg" alt="image1"> -->
+      </div>
+      <div class="px-5 text-center">
+        <h3 class="font-noto-bold text-5xl tracking-tight py-5">Popularity</h3>
+        <p class="font-noto-bold text- tracking-tight">Currency of the 21st century</p>
+        <button class="bg-black mt-6 mx-auto py-5 px-14 text-sm text-white flex nowrap items-center justify-center">
+          How it works?
+          <span class="iconify ml-6 w-6 h-6" data-icon="bi:arrow-right"></span>
+        </button>
+      </div>   
+    </section>
+
+    <section class="sect-2 w-full h-full overflow-hidden">
+      <div class="h-[280px] overflow-hidden">
+        <div class="h-full w-full bg-cover bg-top bg-no-repeat hue-rotate-30 contrast-150 -translate-x-[40px] scale-150 overflow-hidden " style="background-image: url('/assets/images/img2_shutterstock_1658421577.jpg');"></div>
+      </div>
+      <div class="mt-4 px-4 text-center">
+        <p class="font-noto-bold text-xl tracking-tight">What is</p>
+        <h3 class="font-noto-bold text-5xl tracking-tight py-3">Fans Chain</h3>
+        <p class="font-noto-bold text-xs leading-6 tracking-tight">Blockchain platform that creates a new way to invest
+          and monetize content in the music market.</p><br>
+        <p class="font-noto-bold text-xs leading-6 tracking-tight">Artists will get a new kind of content monetization,
+          and fans will get the opportunity to invest directly in
+          musicians and earn money from the growth of their
+          popularity.</p>
+        <button class="bg-black mt-8 mx-auto py-5 px-14  text-white flex nowrap items-center justify-center">
+          Download Presentation
+        </button>
+      </div>
+    </section>
+
+    <section class="sect-3 w-full pt-8">
+      <h3 class="text-center text-2xl font-bold">Social currency</h3>
+      <div class="relative timeline flex w-full h-full px-16 z-0">
+        <div class="reltive cards my-8 border-l border-black ">
+          <div class="relative bg-white text-black w-full pl-8 pb-4">
+            <span class="dot absolute top-[50%] left-0">
+              <span class="absolute h-[26px] w-[26px] top-0 -left-[14px] bg-white border border-black rounded-full">
+                <span class="absolute h-[2px] w-[2px] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-black rounded-full"></span>
+              </span>
+            </span>
+            <p class="text-5xl font-bold">1</p>
+            <p class="text-xs pt-2 font-bold leading-5">The artist issues his own token on the platform - an analogue of shares held by companies.</p>
+          </div>
+          <div class="relative bg-white text-black w-full pl-8 pb-4">
+            <span class="dot absolute top-[50%] left-0">
+              <span class="absolute h-[25px] w-[25px] top-0 -left-[14px]">
+                <span class="absolute h-[4px] w-[4px] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-black rounded-full"></span>
+              </span>
+            </span>
+            <p class="text-5xl font-bold">2</p>
+            <p class="text-xs pt-2 font-bold leading-5">The artist issues his own token on the platform - an analogue of shares held by companies.</p>
+          </div>
+          <div class="relative bg-white text-black w-full pl-8 pb-4">
+            <span class="dot absolute top-[50%] left-0">
+              <span class="absolute h-[25px] w-[25px] top-0 -left-[14px]">
+                <span class="absolute h-[4px] w-[4px] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-black rounded-full"></span>
+              </span>
+            </span>
+            <p class="text-5xl font-bold">3</p>
+            <p class="text-xs pt-2 font-bold leading-5">The token grants access to the artist's exclusive content that is no longer available.</p>
+          </div>          
+        </div>
+        <span class="absolute left-0 -bottom-[10%] w-full h-[130%] bg-gradient-to-t from-white z-0"></span>
+      </div>
+      <div class="relative image w-full max-w-[320px] float-right h-[400px] bg-cover bg-no-repeat bg-center z-10" style="background-image: url(./assets/images/hand.png);"></div>
+    </section>
+
+    <section class="sect-4 relative w-full bg-black text-white p-5 overflow-hidden pb-32">
+      
+      <div class="relative flex items-center pb-6 z-10">
+        <h3 class="text-5xl font-bold pr-2">Platform</h3>
+        <p class="text-sm pt-2 sefl-start">advantages for artists</p>
+      </div>
+      <div class="relative flex flex-wrap gap-3 justify-between z-10">
+        <div class="bg-white text-black w-32 h-32 border-2 border-white py-1 px-3 overflow-hidden">
+          <p class="text-3xl font-bold">1</p>
+          <p class="text-xs pt-1 leading-3">Getting additional profit by selling tokens</p>
+        </div>
+        <div class=" w-32 h-32 border-2 border-white py-1 px-3 overflow-hidden">
+          <p class="text-3xl font-bold">2</p>
+          <p class="text-xs pt-1 leading-3">The ability to mesure popularity - whoever is more expensive is the coolest.</p>
+        </div>
+        <div class="bg-white text-black  w-32 h-32 border-2 border-white py-1 px-3">
+          <p class="text-3xl font-bold">3</p>
+          <p class="text-xs pt-1 leading-3">Getting additional profit by selling tokens</p>
+        </div>
+        <div class=" w-32 h-32 border-2 border-white py-1 px-3">
+          <p class="text-3xl font-bold">4</p>
+          <p class="text-xs pt-1 leading-3">The ability to mesure popularity - whoever is more expensive is the coolest.</p>
+        </div>
+        <div class="bg-white text-black  w-32 h-32 border-2 border-white py-1 px-3">
+          <p class="text-3xl font-bold">5</p>
+          <p class="text-xs pt-1 leading-3">Getting additional profit by selling tokens</p>
+        </div>
+        <div class=" w-32 h-32 border-2 border-white py-1 px-3">
+          <p class="text-3xl font-bold">6</p>
+          <p class="text-xs pt-1 leading-3">The ability to mesure popularity - whoever is more expensive is the coolest.</p>
+        </div>
+      </div>
+      <div class="absolute block w-full h-40 bottom-[75px] bg-no-repeat bg-bottom bg-contain z-0 scale-[2]" style="background-image: url(./assets/images/guitar_AdobeStock_101706699.jpg);"></div>
+      
+    </section>
+
+    <section class="sect-5 w-full pt-10">
+      <h3 class="text-5xl font-bold text-center">FansChain is</h3>
+      <p class="text-xs font-bold py-6 px-4">Key to the ecosystem  of the platform. All calculations on the plaatform are carried out in it.</p>
+      <div class="flex flex-wrap gap-3 justify-between z-10 px-4 pb-">
+        <div class="w-[120px] py-4">
+          <p class="flex items-center justify-center text-xl bg-black text-white w-8 h-8 border-2 border-black py-1 px-3 overflow-hidden">1</p>
+          <p class="text-xs pt-4 leading-3">Exchange artist tokens for a platform token and trade it on the exchange.</p>
+        </div>
+        <div class="w-[120px] py-4">
+          <p class="flex items-center justify-center text-xl bg-white text-black w-8 h-8 border-2 border-black py-1 px-3 overflow-hidden">2</p>
+          <p class="text-xs pt-4 leading-3">Buy a token with a bank card without linking a crypto wallet.</p>
+        </div>
+        <div class="w-[120px] py-4">
+          <p class="flex items-center justify-center text-xl bg-black text-white w-8 h-8 border-2 border-black py-1 px-3 overflow-hidden">3</p>
+          <p class="text-xs pt-4 leading-3">Capitalize on the growing popularity of FansChain token.</p>
+        </div>
+        <div class="w-[120px] py-4">
+          <p class="flex items-center justify-center text-xl bg-white text-black w-8 h-8 border-2 border-black py-1 px-3 overflow-hidden">4</p>
+          <p class="text-xs pt-4 leading-3">Support your favorite artists by promoting their promotion by receiving bonuses from them.</p>
+        </div>
+      </div>
+      <div class="w-full h-[392px] bg-center bg-contain bg-no-repeat" style="background-image: url(./assets/images/people_phone_with_map.png);"></div>
+    </section>
+    
+    <section class="sect-6 w-full pb-6">
+      <h3 class="text-5xl font-bold px-10 pt-10">Road map</h3>
+      <div class="q1 pb-2 border-b border-gray-300">
+        <h4 class="p-10 text-2xl text-gray-400">
+          <span class="text-5xl font-bold text-[#695dff] pr-2">Q1</span>
+          2021</h4>
+        <ul class="list-square text-[#695dff] px-8 ml-6 ">
+          <li class="pb-4">
+            <span class="text-xs text-black ">
+              Development of legal documentation
+            </span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Development of a marketing campaign and economic model</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Closing the seed-round</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Public sale</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">DEX listing</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Launch of marketing and RP campaign in support of Kaif NFT marketplace</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Development of smart contracts in the Polygon network</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Development and release of MVP NFT marketplace</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Release of the first NFT</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Marketing and PR campaign launch</span>
+          </li>
+        </ul>
+      </div>
+      <div class="q2 border-b border-gray-300">
+        <h4 class="py-8 px-10 text-2xl text-gray-400">
+          <span class="text-5xl font-bold text-[#695dff] pr-2">Q2</span>
+          2021</h4>
+        <ul class="list-square text-[#695dff] px-8 ml-6 ">
+          <li class="pb-4">
+            <span class="text-xs text-black ">
+              Development of legal documentation
+            </span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Development of a marketing campaign and economic model</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Closing the seed-round</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Public sale</span>
+          </li>
+        </ul>
+      </div>
+      <div class="q3 border-b border-gray-300">
+        <h4 class="py-8 px-10 text-2xl text-gray-400">
+          <span class="text-5xl font-bold text-[#695dff] pr-2">Q3</span>
+          2021</h4>
+        <ul class="list-square text-[#695dff] px-8 ml-6 ">
+          <li class="pb-4">
+            <span class="text-xs text-black ">
+              Development of legal documentation
+            </span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Development of a marketing campaign and economic model</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Closing the seed-round</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Public sale</span>
+          </li>
+        </ul>
+      </div>
+      <div class="q4">
+        <h4 class="py-8 px-10 text-2xl text-gray-400">
+          <span class="text-5xl font-bold text-[#695dff] pr-2">Q4</span>
+          2021</h4>
+        <ul class="list-square text-[#695dff] px-8 ml-6 ">
+          <li class="pb-4">
+            <span class="text-xs text-black ">
+              Development of legal documentation
+            </span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Development of a marketing campaign and economic model</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Closing the seed-round</span>
+          </li>
+          <li class="pb-4">
+            <span class="text-xs text-black">Public sale</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sect-7 w-full">
+      <div class="relative w-full h-[320px] overflow-hidden z-0">
+        <div class="bg-black w-full h-full ">
+          <div class="relative z-0 w-full h-full bg-cover bg-right bg-no-repeat -translate-x-3" style="background-image: url(./assets/images/face_tmb_66661_6005.jpg);"></div>
+        </div>
+        
+        <div class="absolute bottom-0 w-full px-6 pb-6 contols flex justify-between items-center text-white z-10">
+
+          <span class="left flex justify-center items-center w-12 h-12 border border-[#4a4a4a] hover:border-white cursor-pointer text-gray-500 hover:text-white">
+            <span class="iconify w-4 h-4" data-icon="bi:arrow-left"></span>
+          </span>          
+          
+          <span class="dots flex justify-around">
+            <span class="w-2 h-2 bg-white mx-2 hover:bg-white cursor-pointer"></span>
+            <span class="w-2 h-2 bg-[#4a4a4a] mx-2 hover:bg-white cursor-pointer"></span>
+            <span class="w-2 h-2 bg-[#4a4a4a] mx-2 hover:bg-white cursor-pointer"></span>
+            <span class="w-2 h-2 bg-[#4a4a4a] mx-2 hover:bg-white cursor-pointer"></span>
+            <span class="w-2 h-2 bg-[#4a4a4a] mx-2 hover:bg-white cursor-pointer"></span>
+          </span>
+
+          <span class="right flex justify-center items-center w-12 h-12 border border-[#4a4a4a] hover:border-white cursor-pointer text-gray-500 hover:text-white">
+            <span class="iconify w-4 h-4  " data-icon="bi:arrow-right"></span>
+          </span>
+          
+        </div>
+      </div>
+      <div class="px-6">
+        <p class="text-xl text-gray-300 text-center pt-4">Our Team</p>
+        <h3 class="text-[2.6rem] font-bold text-center">Ivan Oblomov</h3>
+        <p class="text-xs text-center leading-7 pt-2 pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ut deserunt commodi rem laudantium fugiat</p>
+      </div>
+
+      <div class="relative w-full h-[400px] flex justify-between items-center overflow-hidden pt-4">
+        <h3 class="absolute w-full top-[50%] right-0 -translate-y-[50%] text-center text-[3.5em] font-bold text-center z-10">Be <span class="text-white">the first</span></h3>
+        <div class="flex sefl-end w-full h-full z-0 overflow-hidden ">
+          <div class="absolute w-[70%] h-full right-0 bg-bottom bg-cover bg-no-repeat" style="background-image: url(./assets/images/guitar-man_shutterstock_775135948.jpg);"></div>
+        </div>        
+      </div>
+      <div class="px-6 pb-6 text-center">
+        <p class="text-sm font-bold pt-8">on the platform and get exclusive terms of cooperation.</p>
+        <p class="pt-4 text-xs leading-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ut deserunt commodi rem laudantium fugiat perspiciatis iusto suscipit impedit vel</p>
+        <p class="pt-4 text-xs leading-7">dolorum, aspernatur explicabo, similique molestias sit quia, vero dolorem.</p>
+        <button class="w-full bg-black mt-8 py-5 px-12 text-sm text-white flex nowrap items-center justify-center">
+          Join to FansChain
+          <span class="iconify ml-6 w-6 h-6" data-icon="bi:arrow-right"></span>
+        </button>
+      </div>
+    </section>
+    
+    <footer>
+      <h3 class="font-dewi-expanded font-black text-center py-6">FANSCHAIN</h3>
+      <div class="flex justify-between  px-6">
+        <nav class="font-dewi text-xs font-black leading-7">
+          <ul class="">
+            <li>ABOUT US</li>
+            <li>SOCIAL CURRENCY</li>
+            <li>PLATFORM</li>
+            <li>RAOD MAP</li>
+            <li>TEAM</li>
+            <li>EXCLUSIVE</li>
+          </ul>
+        </nav>
+        <div class="flex items-center pr-2">
+          <ul class="flex flex-col translate-x-2">
+            <li class="w-6 h-6">
+              <span class="iconify w-full h-full" data-icon="ei:sc-telegram"></span>
+            </li>
+            <li class="w-6 h-6">
+              <span class="iconify w-full h-full" data-icon="ei:sc-twitter"></span>
+            </li>
+            <li class="w-6 h-6">
+              <span class="iconify w-full h-full" data-icon="ei:sc-instagram"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright flex justify-center py-10 text-[.6rem]">
+        <span class="pr-8">POLICY</span>
+        <span class="font-black">INFO@FANSCHAIN.COM</span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
