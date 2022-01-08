@@ -8,6 +8,12 @@
     font-weight: 800;
     font-style: normal;
 }
+@font-face {
+    font-family: 'SFUI Display Bold';
+    src: url('./sf-ui-display/sf-ui-display-bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'RF Dewi Condensed';
@@ -31,7 +37,7 @@
         url('./rf-dewi/RFDewiExpanded-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
-}
+/* }
 
 @font-face {
     font-family: 'RF Dewi';
@@ -775,4 +781,4 @@
         url('./rf-dewi/RFDewi-SemiboldItalic.ttf') format('truetype');
     font-weight: 600;
     font-style: italic;
-}
+} */
