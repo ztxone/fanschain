@@ -1,4 +1,9 @@
 @font-face {
+    font-family: 'Inter';
+    src: url('./Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+  }
+
+@font-face {
     font-family: 'NotoSansBold';
     src: url('./NotoSans/NotoSansBold/NotoSansBold.eot');
     src: local('./NotoSans/NotoSansBold/NotoSansBold'),

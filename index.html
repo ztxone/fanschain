@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+  <link rel="stylesheet" href="./assets/fonts/fonts.css">
+  <link rel="stylesheet" href="./assets/css/locomotive-scroll.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+  
   <script>
     tailwind.config = {
       theme: {
@@ -19,28 +21,54 @@
           center: true,
         },
         fontFamily: {
+          'inter': ['"Inter", sans-serif'],
           'sfui-bold': ['"SFUI Display Bold"'],
           'dewi-expanded': ['"RF Dewi Expanded"'],
           'noto-bold': ['"NotoSansBold"'],
         },
         listStyleType: {
           square: 'square'
+        },
+        extend: {
+          animation: {
+            bouncel: 'bouncel 1s infinite'
+          },
+          keyframes: {
+            bouncel: {
+              '0%, 100%': {
+                transform: 'translateX(-25%)',
+                animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+              },
+              '50%': {
+                transform: 'translateX(0)',
+                animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+              }
+            }
+          }
         }
+         
       }
     }
   </script>
   <title>FANSCHAIN</title>
 </head>
 <body>
-  <main class="relative w-full h-full overflow-hidden">
-    <header class="mx-auto flex items-center justify-between w-full lg:container h-16 xs:h-20 px-4 xs:px-8 ">
-      <div class="flex justify-between lg:justify-start items-center w-2/3">
+  <section class="intro fixed top-0 bottom-0 left-0 right-0 h-screen overflow-hidden flex justify-center items-center bg-white z-50 opacity-100 delay-100 duration-[2000ms]">
+    <h1 class="intro__h1 font-dewi-expanded text-3xl xs:text-6xl lg:text-9xl  font-black animate-pulse duration-1000">FANSCHAIN</h1>
+  </section>
+  
+
+  <main data-scroll-container class="w-full h-full">
+
+    <header data-scroll-section class="relative mx-auto flex items-center justify-between w-full lg:max-w-[855px] h-16 xs:h-20 px-6 xs:px-8 z-40">
+
+      <div class="flex justify-between lg:justify-start items-center w-2/3  z-10">
         <nav class="flex w-1/2 lg:w-auto lg:pr-8 justify-start">
-        <div class="menu-icon group cursor-pointer grid items-center h-[22px] w-[22px] xs:h-[26px] xs:w-[26px] ">
-          <span class="line-1 block h-[2px] w-full bg-black"></span>
-          <span class="line-2 block h-[2px] w-10/12 bg-black group-hover:w-full"></span>
-          <span class="line-3 block h-[2px] w-full bg-black"></span>
-        </div>        
+          <div class="menu-icon group cursor-pointer grid items-center h-[22px] w-[22px] xs:h-[26px] xs:w-[26px] ">
+            <span class="line-1 block h-[2px] w-full bg-black group-hover:bg-[#695dff]"></span>
+            <span class="line-2 block h-[2px] w-10/12 bg-black group-hover:bg-[#695dff] group-hover:w-full "></span>
+            <span class="line-3 block h-[2px] w-full bg-black group-hover:bg-[#695dff]"></span>
+          </div>        
         <!-- 
           .menu-icon {
             display: grid;
@@ -58,29 +86,24 @@
               }            
               &:hover span:nth-child(1) {
                 width: 35px;
-              }
-            
+              }            
               &:hover span:nth-child(2) {    
                 width: 40px;
-              }
-            
+              }            
               &.active span:nth-child(1) {
                 transform-origin: center center;
                 transform: rotate(-45deg) translate(-12px, 12px);
                 width: 55px;
-              }
-              
+              }              
               &.active span:nth-child(2) {
                 transform: translateX(10px);
                 opacity: 0;
-              }
-            
+              }            
               &.active span:nth-child(3) {
                 transform-origin: center center;
                 transform: rotate(45deg) translate(-15px, -14px);
                 width: 55px;
               }
-
         -->
         </nav>
         
@@ -89,72 +112,85 @@
         </div>
       </div>
       
-      
-      <div class="flex w-1/3 justify-end">
-        <ul class="flex translate-x-2 lg:text-white">
+      <div class="flex w-1/3 justify-end  z-10">
+        <ul class="flex lg:text-white">
           <li class="w-6 h-6 xs:w-8 xs:h-8">
-            <span class="iconify w-full h-full" data-icon="ei:sc-telegram"></span>
+            <a href="#" alt="FansChain Telegram">
+              <span href="#" class="iconify w-full h-full hover:text-[#695dff] hover:scale-[1.1] duration-100" data-icon="ei:sc-telegram"></span>
+            </a>
           </li>
           <li class="w-6 h-6 xs:w-8 xs:h-8">
-            <span class="iconify w-full h-full" data-icon="ei:sc-twitter"></span>
+            <a href="#" alt="FansChain twitter">
+              <span href="#" class="iconify w-full h-full hover:text-[#695dff] hover:scale-[1.1] duration-100" data-icon="ei:sc-twitter"></span>
+            </a>
           </li>
           <li class="w-6 h-6 xs:w-8 xs:h-8">
-            <span class="iconify w-full h-full" data-icon="ei:sc-instagram"></span>
+            <a href="#" alt="FansChain Instagram">
+              <span class="iconify w-full h-full hover:text-[#695dff] hover:scale-[1.1] duration-100" data-icon="ei:sc-instagram"></span>
+            </a>
           </li>
         </ul>
       </div>
     </header>
 
-    <section class="hero-1 h-screen min-h-[540px] lg:mt-[-5rem]">
+    <section id="hero" data-scroll-section class="hero relative h-screen min-h-[540px] lg:mt-[-5rem] z-0">
 
-      <div class="h-[50%] xs:hidden bg-cover bg-top bg-no-repeat" style="background-image: url('./assets/images/img1_shutterstock_740699494.jpg');">
-      </div>
-      <div class="px-5 text-center">
-        <h3 class="xs:hidden font-noto-bold text-5xl tracking-tight py-5">Popularity</h3>
-        <p class="xs:hidden font-noto-bold text- text- tracking-tight">Currency of the 21st century</p>        
+      <div 
+        class="h-[50%] xs:hidden bg-cover bg-top bg-no-repeat"
+        style="background-image: url('./assets/images/img1_shutterstock_740699494.jpg');">       
       </div>
 
-      <div class="hidden xs:flex w-2/3 lg:w-1/2 lg:h-full items-center ml-auto h-[50%] bg-center bg-no-repeat bg-cover" style="background-image: url(./assets/images/img1_shutterstock_740699494.jpg)">
-        <div class="translate-x-[-10.4rem]">
+      <div class="flex flex-col items-center justyfy-around px-5 text-center">
+        <h3 class="xs:hidden font-noto font-bold text-6xl tracking-tight py-7 ">Popularity</h3>
+        <p class="xs:hidden font-noto font-bold text-xl tracking-tight">Currency of the 21st century</p>
+      </div>
+
+      <div data-scroll class="hidden xs:flex w-2/3 lg:w-1/2 lg:h-full items-center ml-auto h-[70%] bg-center bg-no-repeat bg-cover" style="background-image: url(./assets/images/img1_shutterstock_740699494.jpg)">
+        <div data-scroll class="translate-x-[-10.5rem]">
+
           <h3 class="hidden xs:block lg:hidden text-7xl font-bold">Popu<span class="text-white">larity</span></h3>
-          <h3 class="hidden lg:block text-8xl font-bold lg:translate-x-[-8.2rem]">Popula<span class="text-white">rity</span></h3>
 
-          <span class="hidden xs:block lg:hidden text-[1.4rem] font-noto-bold text- tracking-tight ">Currency of the <span class="text-white">21st century</span></span>
-          <span class="hidden xs:hidden lg:block text-[1.4rem] font-noto-bold text-3xl tracking-tight lg:pt-4 lg:translate-x-[-7.7rem]">Currency of the 21st <span class="text-white">century</span></span>
+          <span class="hidden xs:block lg:hidden text-[1.4rem] font-noto font-bold text- tracking-tight translate-x-[.75rem]">Currency of the <span class="text-white">21st century</span></span>
+
+
+          <h3 class="hidden lg:block text-[8rem] font-bold lg:translate-x-[-14.4rem] animate-ring">Popula<span class="text-white">rity</span></h3>
+
+          <span class="hidden lg:block font-noto font-bold text-[2.7rem] tracking-tight lg:pt-2 lg:translate-x-[-13.6rem]">Currency of the 21st <span class="text-white">century</span></span>
           
-          <button class="hidden lg:flex lg:nowrap bg-black lg:mt-20 py-5 xs:py-6 px-14 text-sm text-white  items-center lg:translate-x-[-8rem]">How it works?
-          <span class="iconify ml-6 w-6 h-6" data-icon="bi:arrow-right"></span>
+          <button class="hidden lg:flex lg:nowrap bg-black lg:mt-20 py-5 xs:py-6 px-14 text-white items-center lg:translate-x-[-13.6rem] cursor-pointer  hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">How it works?
+          <span class="iconify ml-6 w-6 h-6 animate-bouncel" data-icon="bi:arrow-right"></span>
         </button>
         </div>          
       </div>
-      
-      <button class="bg-black lg:hidden mt-12 mx-auto py-5 xs:py-6 px-14 text-sm text-white flex nowrap items-center justify-center lg:hidden">How it works?
-        <span class="iconify ml-6 w-6 h-6" data-icon="bi:arrow-right"></span>
-      </button>
+
+      <button class="bg-black lg:hidden mt-12 mx-auto py-5 xs:py-6 px-14 text- text-white flex nowrap items-center justify-center lg:hidden cursor-pointer  hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">How it works?
+          <span class="iconify ml-6 w-6 h-6 animate-bouncel" data-icon="bi:arrow-right"></span>
+        </button>
     </section>
 
-    <section class="sect-2 relative w-full h-full xs:h-full xs:flex xs:items-center">
+    <section id="about" data-scroll-section class="about relative w-full h-full xs:h-full xs:flex xs:items-center">
 
       <div class="h-[280px] xs:h-screen xs:min-h-[568px] xs:w-1/2 overflow-hidden">
         <div class="h-full w-full bg-cover bg-top bg-no-repeat hue-rotate-15 contrast-150 scale-150 xs:scale-100 " style="background-image: url('./assets/images/img2-2_shutterstock_1658421577.jpg');"></div>
       </div>
 
-      <div class="xs:w-1/2 mt-4 px-4 text-center xs:text-left">
+      <div data-scroll class="xs:w-1/2 mt-4 px-4 text-center xs:text-left prose">
 
           <p class="font-noto-bold text-xl lg:text-4xl tracking-tight lg:translate-x-[-14.5rem] lg:text-white">What is</p>
           <h3 class="font-noto-bold text-5xl lg:text-8xl tracking-tight py-3 lg:translate-x-[-14.5rem]"><span class="lg:text-white">Fans</span>Chain</h3>
           <p class="font-noto-bold text-xs leading-6 tracking-tight lg:pr-40 lg:pl-6">Blockchain platform that creates a new way to invest and monetize content in the music market.</p><br>
           <p class="font-noto-bold text-xs leading-6 tracking-tight lg:pr-40  lg:pl-6">Artists will get a new kind of content monetization, and fans will get the opportunity to invest directly in musicians and earn money from the growth of their popularity.</p>
-          <button class="bg-black mt-8 mx-auto xs:mx-0 lg:ml-6 py-5 px-14 xs:px-8 text-white flex nowrap items-center justify-center">
-            Download Presentation
+          <button class="bg-black mt-8 mx-auto xs:mx-0 lg:ml-6 py-5 px-14 xs:px-8 text-white flex nowrap items-center justify-center cursor-pointer  hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">
+            Download Presentation <span class="iconify ml-6 w-6 h-6 animate-bounce" data-icon="carbon:document-download"></span>
+
           </button>
       
       </div>
     </section>
 
-    <section class="sect-3 w-full pt-8 overflow-hidden">
+    <section id="currency" data-scroll-section class="currency relative w-full pt-10 overflow-hidden">
       <div class="flex flex-wrap items-center justify-between w-full xs:h-full">
-        <div class="xs:w-1/2">
+        <div class="xs:ml-auto xs:w-[430px] lg:scale-125">
           <h3 class="text-center md:texl-left text-2xl md:text-3xl font-bold">Social currency</h3>
           <div class="relative timeline flex justify-end w-full h-full px-16 lg:px-24 z-0">
             <div class="reltive cards my-8 border-l border-black ">
@@ -197,9 +233,9 @@
        </div>
     </section>
 
-    <section class="sect-4 relative w-full md:h-[800px] bg-black text-white p-5 overflow-hidden pb-32">
+    <section id="platform" data-scroll-section class="platform relative w-full md:h-[800px] bg-black text-white p-5 overflow-hidden pb-32">
       
-      <div class="relative  flex items-center xs:justify-center py-8 z-10">
+      <div class="relative  flex items-center justify-center py-8 z-10">
         <h3 class="text-5xl lg:text-7xl font-bold pr-2">Platform</h3>
         <p class="text-sm lg:text-xl pt-2 sefl-start">advantages<br>for artists</p>
       </div>
@@ -239,7 +275,7 @@
       
     </section>
 
-    <section class="sect-5 relative w-full xs:flex xs:justify-between xs:pt-0 xs:h-full">
+    <section id="fcis" data-scroll-section class="fcis relative w-full xs:flex xs:justify-between xs:pt-0 xs:h-full">
       <div class="md:container md:pt-10">
         <div class="flex flex-col w-full xs:w-1/2 xs:h-full xs:items-start xs:justify-center ">
           <h3 class="text-4xl lg:text-7xl font-bold text-center lg:text-left mt-10 px-4">FansChain is</h3>
@@ -267,7 +303,7 @@
       <div class="xs:absolute xs:right-0 w-full xs:w-1/2 h-[392px] xs:h-full xs:min-h-[568px] bg-center xs:bg-right bg-cover xs:bg-contain bg-no-repeat" style="background-image: url(./assets/images/people_phone_with_map.png);"></div>
     </section>
     
-    <section class="sect-6 relative w-full pb-6">
+    <section id="roadmap" data-scroll-section class="roadmap relative w-full pb-6">
       <div class="container">
         <h3 class="relative text-5xl font-bold px-10 pt-10 lg:mt-16 z-10">Road map</h3>
         <div class="q1 relative pb-2 border-b border-gray-300 md:flex md: md:pt-12  z-10">
@@ -378,7 +414,7 @@
       <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent"></div><div class="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
     </section>
 
-    <section class="sect-7 relative w-full h-full md:h-screen overflow-hidden">
+    <!-- <section class="sect-7 relative w-full h-full md:h-screen overflow-hidden">
 
       <div class="md:flex md:items-center md:h-full md:w-full ">
         <div class="relative w-full md:w-1/2 h-[320px] md:h-full overflow-hidden z-0">
@@ -412,9 +448,9 @@
         
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="sect-8 relative w-full h-full md:h-screen md:min-h-[768px] flex flex-wrap overflow-hidden">
+    <section id="exclusive" data-scroll-section class="exclusive relative w-full h-full md:h-screen md:min-h-[768px] flex flex-wrap overflow-hidden">
       
       <div class="relative order-last md:order-none z-10 flex flex-col justify-center w-full md:w-1/2">
         
@@ -426,7 +462,7 @@
 
           <p class="text-sm pt-8 px-4 md:pl-0 text-center md:text-left leading-7 tracking-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, ut voluptatem voluptas dolor incidunt hic voluptate esse dolorem nostrum ipsum, in itaque culpa, aperiam iure doloremque minus repellat neque accusantium!</p><br>
           <p class="text-sm px-4 md:pl-0 text-center md:text-left leading-7 tracking-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, ut voluptatem voluptas dolor incidunt hic voluptate esse dolorem nostrum ipsum, in itaque culpa, aperiam iure doloremque minus repellat neque accusantium!</p>
-          <button class="flex w-fit mx-auto md:mx-0 nowrap items-center bg-black mt-12 py-5 px-10 text-xs text-white ">Join to FansChain<span class="iconify ml-6 w-6 h-6" data-icon="bi:arrow-right"></span>
+          <button class="flex w-fit mx-auto md:mx-0 nowrap items-center bg-black mt-12 py-5 px-10 text-white cursor-pointer  hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">Join to FansChain<span class="iconify ml-6 w-6 h-6  animate-bouncel" data-icon="bi:arrow-right"></span>
           </button>
         </div>
         
@@ -442,39 +478,158 @@
    
     </section>
     
-    <footer class="container">
-      <h3 class="font-dewi-expanded font-black text-center pb-8 pt-16">FANSCHAIN</h3>
-      <div class="flex justify-between  px-6">
-        <nav class="font-dewi text-xs font-black leading-7">
-          <ul class="">
-            <li>ABOUT US</li>
-            <li>SOCIAL CURRENCY</li>
-            <li>PLATFORM</li>
-            <li>ROAD MAP</li>
-            <li>TEAM</li>
-            <li>EXCLUSIVE</li>
+    <footer data-scroll-section class="relative container flex flex-col">
+      <div data-scroll class="mobile-footer lg:hidden px-6">
+
+        <h3 class="font-dewi-expanded font-black text-center mt-16 pb-8"> 
+          <a href="/" alt="FansChain Homepage">
+            FANSCHAIN
+          </a>
+        </h3>
+        
+        <div class="flex">
+          <nav class="w-full px-6 font-dewi text-xs font-black leading-7">
+            <ul class="lg:flex lg:justify-evenly gap-3">
+              <li>
+                <a href="#about" alt="About FansChain">
+                  <span class="hover:text-[#695dff]">ABOUT US</span>
+                </a>
+              </li>
+              <li>
+                <a href="#currency" alt="Social Currency">
+                  <span class="hover:text-[#695dff]">SOCIAL CURRENCY</span>
+                </a>              
+              </li>
+              <li>
+                <a href="#platform" alt="Platform">
+                  <span class="hover:text-[#695dff]">PLATFORM</span>
+                </a>              
+              </li>
+              <li>
+                <a href="#roadmap" alt="Road map">
+                  <span class="hover:text-[#695dff]">ROAD MAP</span>
+                </a>              
+              </li>
+              <li>
+                <a href="#fcis" alt="Road map">
+                  <span class="hover:text-[#695dff]">FANSCHAIN IS</span>
+                </a>              
+              </li>
+              <li>
+                <a href="#exclusive" alt="FansChain Exclusive">
+                  <span class="hover:text-[#695dff]">EXCLUSIVE</span>
+                </a>              
+              </li>
+            </ul>
+          </nav>
+          <div class="flex items-center justify-center">
+            <ul class="flex flex-col gap-3">
+              <li class="w-8 h-8">
+                <a href="#" alt="FansChain Telegram">
+                  <span href="#" class="iconify w-full h-full hover:text-[#695dff] hover:scale-[1.1] duration-100" data-icon="ei:sc-telegram"></span>
+                </a>
+              </li>
+              <li class="w-8 h-8">
+                <a href="#" alt="FansChain twitter">
+                  <span href="#" class="iconify w-full h-full hover:text-[#695dff] hover:scale-[1.1] duration-100" data-icon="ei:sc-twitter"></span>
+                </a>
+              </li>
+              <li class="w-8 h-8">
+                <a href="#" alt="FansChain Instagram">
+                  <span class="iconify w-full h-full hover:text-[#695dff] hover:scale-[1.1] duration-100" data-icon="ei:sc-instagram"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright flex justify-center py-10 text-[.6rem] lg:text-xs lg:py-0">
+          <a href="#" class="mr-8 font-bold text-black/40 border-b border-black/20 hover:border-[#695dff] hover:text-[#695dff] cursor-pointer">POLICY</a>
+          <a href="mailto:info@fanschain.com" class="font-black hover:text-[#695dff]">INFO@FANSCHAIN.COM</a>
+        </div>
+
+      </div>
+
+
+
+      <div data-scroll class="full-footer hidden lg:flex items-center justify-evenly px-6 pt-16 pb-10">
+
+        <h3 class="font-dewi-expanded font-black text-center"> 
+          <a href="/" alt="FansChain Homepage">
+            FANSCHAIN
+          </a>
+        </h3>
+        
+        <nav class="w-full font-dewi text-xs font-black leading-7">
+          <ul class="lg:flex lg:justify-evenly ">
+            <li>
+              <a href="#about" alt="About FansChain">
+                <span class="hover:text-[#695dff]">ABOUT US</span>
+              </a>
+            </li>
+            <li>
+              <a href="#currency" alt="Social Currency">
+                <span class="hover:text-[#695dff]">SOCIAL CURRENCY</span>
+              </a>              
+            </li>
+            <li>
+              <a href="#platform" alt="Platform">
+                <span class="hover:text-[#695dff]">PLATFORM</span>
+              </a>              
+            </li>
+            <li>
+              <a href="#roadmap" alt="Road map">
+                <span class="hover:text-[#695dff]">ROAD MAP</span>
+              </a>              
+            </li>
+            <li>
+              <a href="#fcis" alt="Road map">
+                <span class="hover:text-[#695dff]">FANSCHAIN IS</span>
+              </a>              
+            </li>
+            <li>
+              <a href="#exclusive" alt="FansChain Exclusive">
+                <span class="hover:text-[#695dff]">EXCLUSIVE</span>
+              </a>              
+            </li>
           </ul>
         </nav>
-        <div class="flex items-center pr-2">
-          <ul class="flex flex-col translate-x-2">
-            <li class="w-6 h-6">
-              <span class="iconify w-full h-full" data-icon="ei:sc-telegram"></span>
+          
+        </div> 
+      </div>
+      <div class="hidden lg:flex items-center justify-center gap-6 px-6 pb-6">
+
+        <div class="copyright flex justify-center py-10 text-[.6rem] lg:text-xs lg:py-0">
+          <a href="#" class="mr-8 font-bold text-black/40 border-b border-black/20 hover:border-[#695dff] hover:text-[#695dff] cursor-pointer">POLICY</a>
+          <a href="mailto:info@fanschain.com" class="font-black hover:text-[#695dff]">INFO@FANSCHAIN.COM</a>
+        </div>
+
+        <div class="flex items-center justify-center">
+          <ul class="flex flex-col lg:flex-row">
+            <li class="w-6 h-6 lg:w-8 lg:h-8">
+              <a href="#" alt="FansChain Telegram">
+                <span href="#" class="iconify w-full h-full hover:text-[#695dff] hover:scale-[1.1] duration-100" data-icon="ei:sc-telegram"></span>
+              </a>
             </li>
-            <li class="w-6 h-6">
-              <span class="iconify w-full h-full" data-icon="ei:sc-twitter"></span>
+            <li class="w-6 h-6 lg:w-8 lg:h-8">
+              <a href="#" alt="FansChain twitter">
+                <span href="#" class="iconify w-full h-full hover:text-[#695dff] hover:scale-[1.1] duration-100" data-icon="ei:sc-twitter"></span>
+              </a>
             </li>
-            <li class="w-6 h-6">
-              <span class="iconify w-full h-full" data-icon="ei:sc-instagram"></span>
+            <li class="w-6 h-6 lg:w-8 lg:h-8">
+              <a href="#" alt="FansChain Instagram">
+                <span class="iconify w-full h-full hover:text-[#695dff] hover:scale-[1.1] duration-100" data-icon="ei:sc-instagram"></span>
+              </a>
             </li>
           </ul>
-        </div>
-      </div>
-      
-      <div class="copyright flex justify-center py-10 text-[.6rem]">
-        <span class="pr-8">POLICY</span>
-        <span class="font-black">INFO@FANSCHAIN.COM</span>
-      </div>
+        </div>        
+        
+      </div>      
+
     </footer>
   </main>
+
+  <script src="./assets/js/locomotive-scroll.min.js"></script>
+  <script src="./assets/js/index.js"></script>
 </body>
 </html>
