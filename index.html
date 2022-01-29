@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/fonts/fonts.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
   <link rel="stylesheet" href="./assets/css/locomotive-scroll.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-  
+  <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/main.css">
+
   <script>
     tailwind.config = {
       theme: {
@@ -16,15 +19,14 @@
           'xs': '540px',
           'md': '768px',
           'lg': '1024px',
+          'xl': '1140px',
         },
         container: {
+          width: '1140px',
           center: true,
         },
         fontFamily: {
-          'inter': ['"Inter", sans-serif'],
-          'sfui-bold': ['"SFUI Display Bold"'],
           'dewi-expanded': ['"RF Dewi Expanded"'],
-          'noto-bold': ['"NotoSansBold"'],
         },
         listStyleType: {
           square: 'square'
@@ -53,24 +55,24 @@
   <title>FANSCHAIN</title>
 </head>
 <body>
-  <section class="intro fixed top-0 bottom-0 left-0 right-0 h-screen overflow-hidden flex justify-center items-center bg-white z-50 opacity-100 delay-100 duration-[2000ms]">
+  <!-- <section class="intro fixed top-0 bottom-0 left-0 right-0 h-screen overflow-hidden flex justify-center items-center bg-white z-50 opacity-100 delay-100 duration-[2000ms]">
     <h1 class="intro__h1 font-dewi-expanded text-3xl xs:text-6xl lg:text-9xl  font-black animate-pulse duration-1000">FANSCHAIN</h1>
-  </section>
+  </section> -->
   
 
-  <main data-scroll-container class="w-full h-full">
+  <main data-scroll-container class="relative w-full h-full overflow-hidden">
 
-    <header data-scroll-section class="relative mx-auto flex items-center justify-between w-full lg:max-w-[855px] h-16 xs:h-20 px-6 xs:px-8 z-40">
+    <header class="relative mx-auto flex items-center justify-between w-full xl:max-w-[1140px] h-16 xs:h-20 px-6 xs:px-8 z-40">
 
-      <div class="flex justify-between lg:justify-start items-center w-2/3  z-10">
-        <nav class="flex w-1/2 lg:w-auto lg:pr-8 justify-start">
-          <div class="menu-icon group cursor-pointer grid items-center h-[22px] w-[22px] xs:h-[26px] xs:w-[26px] ">
+      <div class="flex justify-between xl:justify-start items-center w-2/3  z-10">
+        <nav class="flex w-1/2 xl:w-auto xl:pr-8 justify-start">
+          <div class="menu-span group cursor-pointer grid items-center h-[22px] w-[22px] xs:h-[26px] xs:w-[26px] ">
             <span class="line-1 block h-[2px] w-full bg-black group-hover:bg-[#695dff]"></span>
             <span class="line-2 block h-[2px] w-10/12 bg-black group-hover:bg-[#695dff] group-hover:w-full "></span>
             <span class="line-3 block h-[2px] w-full bg-black group-hover:bg-[#695dff]"></span>
           </div>        
         <!-- 
-          .menu-icon {
+          .menu-span {
             display: grid;
             place-items: center;
             height: 55px;
@@ -107,13 +109,13 @@
         -->
         </nav>
         
-        <div class="flex w-1/2 justify-center lg:justify-start">
+        <div class="flex w-1/2 justify-center xl:justify-start">
           <h1 class="font-dewi-expanded xs:text-xl font-black">FANSCHAIN</h1>
         </div>
       </div>
       
       <div class="flex w-1/3 justify-end  z-10">
-        <ul class="flex lg:text-white">
+        <ul class="flex xl:text-white">
           <li class="w-6 h-6 xs:w-8 xs:h-8">
             <a href="#" alt="FansChain Telegram">
               <span href="#" class="iconify w-full h-full hover:text-[#695dff] hover:scale-[1.1] duration-100" data-icon="ei:sc-telegram"></span>
@@ -133,215 +135,342 @@
       </div>
     </header>
 
-    <section id="hero" data-scroll-section class="hero relative h-screen min-h-[540px] lg:mt-[-5rem] z-0">
+    <section id="hero" data-scroll-section class="hero h-screen min-h-[540px] xl:mt-[-5rem] z-0">   
+      <div class="relative flex xl:justify-center items-center w-full h-full">
 
-      <div 
-        class="h-[50%] xs:hidden bg-cover bg-top bg-no-repeat"
-        style="background-image: url('./assets/images/img1_shutterstock_740699494.jpg');">       
-      </div>
+        <div  class="img absolute top-0 w-full h-1/2 bg-cover bg-top bg-no-repeat z-0
+                    xs:w-3/5 xs:right-0 xs:h-2/3
+                    xl:w-1/2 xl:h-full"
+              style="background-image: url('./assets/images/img1_shutterstock_740699494.jpg');"></div>
 
-      <div class="flex flex-col items-center justyfy-around px-5 text-center">
-        <h3 class="xs:hidden font-noto font-bold text-6xl tracking-tight py-7 ">Popularity</h3>
-        <p class="xs:hidden font-noto font-bold text-xl tracking-tight">Currency of the 21st century</p>
-      </div>
+        <div class="text w-full h-full flex justify-center items-center z-10
+                    xs:w-2/5 xs:justify-end
+                    xl:w-[1140px] xl:justify-start xl:items-center">          
 
-      <div data-scroll class="hidden xs:flex w-2/3 lg:w-1/2 lg:h-full items-center ml-auto h-[70%] bg-center bg-no-repeat bg-cover" style="background-image: url(./assets/images/img1_shutterstock_740699494.jpg)">
-        <div data-scroll class="translate-x-[-10.5rem]">
+          <div class="flex flex-col justify-center items-center px-6 pt-[200px]
+                      xs:items-end xs:pt-0
+                      ">
+            <!-- mobile -->
+            <h3 class="xs:hidden font-bold text-[55px] tracking-tight">Popularity</h3>
+            
+            <p class="xs:hidden font-bold text-lg tracking-tight pb-4">Currency of the 21st century</p>
+            
+            <!-- XS/MD/LG size -->
+            <h3 class="hidden xs:block xl:hidden font-bold tracking-tight pb-4
+            xs:text-[80px] xs:translate-x-[212px]
+            md:text-[118px] md:translate-x-[302px]
+            lg:text-[118px] lg:translate-x-[302px]">Popu<span class="text-white">larity</span></h3>
+            
+            <p class="hidden xs:block xl:hidden font-bold tracking-tight pb-16
+            xs:text-[25px] xs:translate-x-[173px]
+            md:text-[38px] md:translate-x-[250px]
+            lg:text-[38px] lg:translate-x-[250px]">Currency of the <span class="text-white"> 21st century</span></p>
 
-          <h3 class="hidden xs:block lg:hidden text-7xl font-bold">Popu<span class="text-white">larity</span></h3>
+            <!-- XL size -->
+            <h3 class="hidden xl:block font-bold tracking-tight pb-4 xl:text-[170px] ">Popula<span class="text-white">rity</span></h3>
+            <p class="hidden xl:block font-bold xl:text-[57.3px] xl:translate-x-[-47px] tracking-tight pb-16">Currency of the 21st <span class="text-white">century</span></p>
 
-          <span class="hidden xs:block lg:hidden text-[1.4rem] font-noto font-bold text- tracking-tight translate-x-[.75rem]">Currency of the <span class="text-white">21st century</span></span>
 
-
-          <h3 class="hidden lg:block text-[8rem] font-bold lg:translate-x-[-14.4rem] animate-ring">Popula<span class="text-white">rity</span></h3>
-
-          <span class="hidden lg:block font-noto font-bold text-[2.7rem] tracking-tight lg:pt-2 lg:translate-x-[-13.6rem]">Currency of the 21st <span class="text-white">century</span></span>
+            <a href="#about" 
+                    class="w-fit bg-black pl-10 pr-8 py-4 text-white items-center cursor-pointer 
+                          xs:mt-[50%] xs:translate-x-[215px] xs:self-end
+                          md:mt-[15%] md:py-5 md:px-14                    
+                          xl:py-6 xl:px-16 xl:text-lg xl:self-start xl:mt-0 xl:translate-x-0
+                          hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">
+              How it works?
+              <span class="iconify inline ml-6 w-6 h-6 animate-bouncel" data-icon="bi:arrow-right"></span>
+              </a>
+          </div>
           
-          <button class="hidden lg:flex lg:nowrap bg-black lg:mt-20 py-5 xs:py-6 px-14 text-white items-center lg:translate-x-[-13.6rem] cursor-pointer  hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">How it works?
-          <span class="iconify ml-6 w-6 h-6 animate-bouncel" data-icon="bi:arrow-right"></span>
-        </button>
-        </div>          
-      </div>
+        </div>
 
-      <button class="bg-black lg:hidden mt-12 mx-auto py-5 xs:py-6 px-14 text- text-white flex nowrap items-center justify-center lg:hidden cursor-pointer  hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">How it works?
-          <span class="iconify ml-6 w-6 h-6 animate-bouncel" data-icon="bi:arrow-right"></span>
-        </button>
+      </div>
     </section>
 
-    <section id="about" data-scroll-section class="about relative w-full h-full xs:h-full xs:flex xs:items-center">
+    <section id="about" data-scroll-section class="about h-full xs:h-screen min-h-[540px] z-0 xs:flex xs:items-center">
 
       <div class="h-[280px] xs:h-screen xs:min-h-[568px] xs:w-1/2 overflow-hidden">
         <div class="h-full w-full bg-cover bg-top bg-no-repeat hue-rotate-15 contrast-150 scale-150 xs:scale-100 " style="background-image: url('./assets/images/img2-2_shutterstock_1658421577.jpg');"></div>
       </div>
-
-      <div data-scroll class="xs:w-1/2 mt-4 px-4 text-center xs:text-left prose">
-
-          <p class="font-noto-bold text-xl lg:text-4xl tracking-tight lg:translate-x-[-14.5rem] lg:text-white">What is</p>
-          <h3 class="font-noto-bold text-5xl lg:text-8xl tracking-tight py-3 lg:translate-x-[-14.5rem]"><span class="lg:text-white">Fans</span>Chain</h3>
-          <p class="font-noto-bold text-xs leading-6 tracking-tight lg:pr-40 lg:pl-6">Blockchain platform that creates a new way to invest and monetize content in the music market.</p><br>
-          <p class="font-noto-bold text-xs leading-6 tracking-tight lg:pr-40  lg:pl-6">Artists will get a new kind of content monetization, and fans will get the opportunity to invest directly in musicians and earn money from the growth of their popularity.</p>
-          <button class="bg-black mt-8 mx-auto xs:mx-0 lg:ml-6 py-5 px-14 xs:px-8 text-white flex nowrap items-center justify-center cursor-pointer  hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">
-            Download Presentation <span class="iconify ml-6 w-6 h-6 animate-bounce" data-icon="carbon:document-download"></span>
-
-          </button>
+    
+      <div class="xs:w-1/2 mt-4 px-6 text-center xs:text-left">
+    
+          <p class="text-2xl font-bold tracking-tight
+                    md:text-3xl
+                    lg:text-4xl lg:translate-x-[-242px] lg:text-white
+                    xl:text-6xl xl:translate-x-[-313px]">What is</p>
+    
+          <h3 class="text-6xl font-bold tracking-tight py-4
+                      xs:text-5xl xs:pb-8
+                      md:text-6xl
+                      lg:text-8xl lg:translate-x-[-242px]
+                      xl:text-9xl xl:translate-x-[-313px]"><span class="lg:text-white">Fans</span>Chain</h3>
+    
+          <p class="leading-6 max-w-[570px] md:text-lg lg:pr-[40px] lg:pl-6 xl:text-xl">Blockchain platform that creates a new way to invest and monetize content in the music market.</p>
+          <br>
+          <p class="leading-6 max-w-[570px] md:text-lg lg:pr-[40px] lg:pl-6 xl:text-xl">Artists will get a new kind of content monetization, and fans will get the opportunity to invest directly in musicians and earn money from the growth of their popularity.</p>
+          
+          <a href="#" class="bg-black mt-8 mx-auto py-5 px-6 text-white flex nowrap items-center justify-center cursor-pointer
+                              xs:mx-0 xs:px-6 xs:text-xs xs:mt-14
+                              md:text-base
+                              lg:ml-6 lg:w-fit lg:px-8 xl:py-6 xl:px-10
+                              hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">
+            Download Presentation <span class="iconify ml-6 w-6 h-6 animate-bounce xs:ml-2" data-icon="carbon:document-download"></span>
+          </a>
       
       </div>
     </section>
 
-    <section id="currency" data-scroll-section class="currency relative w-full pt-10 overflow-hidden">
-      <div class="flex flex-wrap items-center justify-between w-full xs:h-full">
-        <div class="xs:ml-auto xs:w-[430px] lg:scale-125">
-          <h3 class="text-center md:texl-left text-2xl md:text-3xl font-bold">Social currency</h3>
-          <div class="relative timeline flex justify-end w-full h-full px-16 lg:px-24 z-0">
+    <section id="currency" data-scroll-section class="currency relative w-full h-full lg;h-screen min-h-[540px]  overflow-hidden">      
+      <!-- <div id="tsparticles"></div> -->
+      <div class="flex flex-wrap lg:flex-nowrap items-center justify-between lg:justify-center w-full xs:h-full">
+        <div class="xs:ml-auto xs:w-full
+                    lg:ml-0 lg:w-1/2 lg:flex lg:flex-col lg:items-end">
+  
+          <h3 class="text-center text-3xl font-bold mt-10
+                    xs:text-4xl xs:mt-14
+                    md:texl-left md:text-5xl
+                    lg:pb-10 lg:px-16
+                    xl:w-[570px] xl:text-[3.25rem] xl:px-10">Social currency</h3>
+  
+          <div class="relative timeline flex justify-center w-full h-full px-16  z-0
+                      lg:justify-end
+                      xl:w-[570px]">
             <div class="reltive cards my-8 border-l border-black ">
-              <div class="relative bg-white text-black w-full pl-8 pb-4">
+              <div class="relative bg-white text-black w-full pl-8 pb-4 xs:mb-4">
                 <span class="dot absolute top-[50%] left-0">
-                  <span class="absolute h-[26px] w-[26px] top-0 -left-[14px] bg-white border border-black rounded-full">
-                    <span class="absolute h-[2px] w-[2px] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-black rounded-full"></span>
+                  <span class="absolute h-[26px] w-[26px] top-0 -left-[13px] bg-white border border-black rounded-full flex items-center justify-center">
+                    <span class="h-[3px] w-[3px] bg-black rounded-full"></span>
                   </span>
                 </span>
-                <p class="text-5xl font-bold">1</p>
-                <p class="text-xs pt-2 font-bold leading-5">The artist issues his own token on the platform - an analogue of shares held by companies.</p>
+                <p class="text-5xl md:text-6xl font-bold">1</p>
+                <p class="text-xs xs:text-sm md:text-base pt-2 font-bold leading-5">The artist releases his own token on the platform (releases / publishes) - Similar to stock issue</p>
               </div>
-              <div class="relative bg-white text-black w-full pl-8 pb-4">
-                <span class="dot absolute top-[50%] left-0">
-                  <span class="absolute h-[25px] w-[25px] top-0 -left-[14px]">
-                    <span class="absolute h-[4px] w-[4px] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-black rounded-full"></span>
+  
+              <div class="relative bg-white text-black w-full pl-8 pb-4 xs:mb-4">
+                <span class="dot absolute top-[50%] left-[0px]">
+                  <span class="absolute h-[26px] w-[26px] top-0 -left-[13px] flex items-center justify-center">
+                    <span class="h-[5px] w-[5px] bg-black rounded-full"></span>
                   </span>
                 </span>
-                <p class="text-5xl font-bold">2</p>
-                <p class="text-xs pt-2 font-bold leading-5">The artist issues his own token on the platform - an analogue of shares held by companies.</p>
+                <p class="text-5xl md:text-6xl font-bold">2</p>
+                <p class="text-xs xs:text-sm md:text-base pt-2 font-bold leading-5">The token gives access to the Artist`s exclusive content with no other way to get it.</p>
               </div>
-              <div class="relative bg-white text-black w-full pl-8 pb-4">
-                <span class="dot absolute top-[50%] left-0">
-                  <span class="absolute h-[25px] w-[25px] top-0 -left-[14px]">
-                    <span class="absolute h-[4px] w-[4px] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-black rounded-full"></span>
+  
+              <div class="relative bg-white text-black w-full pl-8 pb-4 xs:mb-4">
+                <span class="dot absolute top-[50%] left-[0px]">
+                  <span class="absolute h-[26px] w-[26px] top-0 -left-[13px] flex items-center justify-center">
+                    <span class="h-[5px] w-[5px] bg-black rounded-full"></span>
                   </span>
                 </span>
-                <p class="text-5xl font-bold">3</p>
-                <p class="text-xs pt-2 font-bold leading-5">The token grants access to the artist's exclusive content that is no longer available.</p>
-              </div>          
+                <p class="text-5xl md:text-6xl font-bold">3</p>
+                <p class="text-xs xs:text-sm md:text-base pt-2 font-bold leading-5">The more promising the content and more popular the Performer is, the more expensive his token is and more users want to buy it - the reverse situation is also possible.</p>
+              </div>
+  
+              <div  class="relative bg-white text-black w-full pl-8 pb-4 xs:mb-4">
+                <span  class="dot absolute top-[50%] left-[0px]">
+                  <span class="absolute h-[26px] w-[26px] top-0 -left-[13px] flex items-center justify-center">
+                    <span class="h-[5px] w-[5px] bg-black rounded-full"></span>
+                  </span>
+                </span>
+                <p  class="text-5xl md:text-6xl font-bold">4</p>
+                <p  class="text-xs xs:text-sm md:text-base pt-2 font-bold leading-5">Tokens sale money is transferred to the artist or label, and fans will trade tokens and earn on the price increase.</p>
+              </div>  
+            
+              <span class="absolute left-0 -bottom-[10%] w-full h-[130%] bg-gradient-to-t from-white z-0"></span>
             </div>
-            <span class="absolute left-0 -bottom-[10%] w-full h-[130%] bg-gradient-to-t from-white z-0"></span>
           </div>
         </div>
       
-        <div class="relative w-full xs:w-1/2 h-[400px] xs:h-screen xs:min-h-[568px] mt-auto">
-          <div class="xs:hidden absolute bottom-0 right-0 w-full max-w-[320px] h-[400px] bg-contain bg-no-repeat bg-right-bottom z-10" style="background-image: url(./assets/images/hand.png);"></div>
-          <div class="hidden xs:block xs:absolute xs:bottom-0 xs:right-0 w-full h-full bg-contain bg-no-repeat bg-right-bottom z-10" style="background-image: url(./assets/images/big-hand.png);"></div>
+        <div class="relative w-full h-[400px] mt-auto
+                    md:w-full md:h-screen md:min-h-[568px]
+                    lg:w-1/2 ">
+  
+          <div class="absolute bottom-0 right-0 w-full h-full bg-contain bg-no-repeat bg-right-bottom z-10
+                      hidden lg:block xl:hidden
+                      md:block
+                      lg:bg-left-bottom" style="background-image: url(./assets/images/section3hero.png);"></div>
+  
+          <div class="absolute bottom-0 right-0 w-full h-[400px] bg-contain bg-no-repeat bg-right-bottom   
+                      lg:bg-left-bottom z-10
+                      md:h-full md:hidden xl:block
+                      " style="background-image: url(./assets/images/hand-cut.png);"></div>
         </div>
-       </div>
+      </div>
     </section>
 
-    <section id="platform" data-scroll-section class="platform relative w-full md:h-[800px] bg-black text-white p-5 overflow-hidden pb-32">
-      
-      <div class="relative  flex items-center justify-center py-8 z-10">
-        <h3 class="text-5xl lg:text-7xl font-bold pr-2">Platform</h3>
-        <p class="text-sm lg:text-xl pt-2 sefl-start">advantages<br>for artists</p>
-      </div>
-      <div class="relative flex flex-wrap lg:max-w-[800px] xs:px-12 gap-3 xs:gap-6 md:gap-10 lg:pt-10 justify-center items-center md:mx-auto z-10">
-        <div class="bg-white text-black w-32 h-32  md:w-40 md:h-40 lg:w-48 lg:h-48  border-2 border-white py-1 px-3 overflow-hidden">
-          <p class="text-3xl font-bold">1</p>
-          <p class="text-xs pt-1 leading-3">Getting additional profit by selling tokens</p>
+    <section id="platform" data-scroll-section class="platform relative w-full h-full lg:h-screen min-h-[540px] bg-black text-white p-5 overflow-hidden pb-32">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <div class="relative flex items-center justify-center py-8 z-10">
+          <h3 class="text-5xl lg:text-7xl font-bold pr-2">Platform</h3>
+          <p class="text-sm lg:text-xl pt-2 sefl-start">advantages<br>for artists</p>
         </div>
-        <div class=" w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 border-2 border-white py-1 px-3 overflow-hidden">
-          <p class="text-3xl font-bold">2</p>
-          <p class="text-xs pt-1 leading-3">The ability to mesure popularity - whoever is more expensive is the coolest.</p>
-        </div>
-        <div class="bg-white text-black  w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 border-2 border-white py-1 px-3">
-          <p class="text-3xl font-bold">3</p>
-          <p class="text-xs pt-1 leading-3">Getting additional profit by selling tokens</p>
-        </div>
-        <div class=" w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 border-2 border-white py-1 px-3">
-          <p class="text-3xl font-bold">4</p>
-          <p class="text-xs pt-1 leading-3">The ability to mesure popularity - whoever is more expensive is the coolest.</p>
-        </div>
-        <div class="bg-white text-black  w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 border-2 border-white py-1 px-3">
-          <p class="text-3xl font-bold">5</p>
-          <p class="text-xs pt-1 leading-3">Getting additional profit by selling tokens</p>
-        </div>
-        <div class=" w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 border-2 border-white py-1 px-3">
-          <p class="text-3xl font-bold">6</p>
-          <p class="text-xs pt-1 leading-3">The ability to mesure popularity - whoever is more expensive is the coolest.</p>
+  
+        <div class="relative flex flex-wrap gap-3 justify-center items-center z-10
+                    xs:px-12 xs:gap-6
+                    md:gap-10 md:mx-auto
+                    lg:max-w-[1148px] lg:pt-10">
+  
+          <div class="bg-white text-black w-32 h-32 border-2 border-white py-1 px-3 overflow-hidden
+                      group hover:border-[#695dff] cursor-pointer
+                      xs:w-40 xs:h-40
+                      md:w-48 md:h-48 md:py-2 md:px-4
+                      lg:w-60 lg:h-60 lg:py-3 lg:px-5">
+            <p class="text-3xl md:text-5xl lg:text-6xl font-bold group-hover:text-[#695dff]">1</p>
+            <p class="text-xs xs:text-sm lg:text-lg pt-1 leading-3">Getting additional profit by selling tokens</p>
+          </div>
+          <div class="bg-black w-32 h-32 border-2 border-white py-1 px-3 overflow-hidden
+                      group hover:border-[#695dff] cursor-pointer
+                      xs:w-40 xs:h-40
+                      md:w-48 md:h-48 md:py-2 md:px-4
+                      lg:w-60 lg:h-60 lg:py-3 lg:px-5">
+            <p class="text-3xl md:text-5xl lg:text-6xl font-bold group-hover:text-[#695dff]">2</p>
+            <p class="text-xs xs:text-sm lg:text-lg pt-1 leading-3">The ability to mesure popularity - whoever is more expensive is the coolest</p>
+          </div>
+          <div class="bg-white text-black w-32 h-32 border-2 border-white py-1 px-3 overflow-hidden
+                      group hover:border-[#695dff] cursor-pointer
+                      xs:w-40 xs:h-40
+                      md:w-48 md:h-48 md:py-2 md:px-4
+                      lg:w-60 lg:h-60 lg:py-3 lg:px-5">
+            <p class="text-3xl md:text-5xl lg:text-6xl font-bold group-hover:text-[#695dff]">3</p>
+            <p class="text-xs xs:text-sm lg:text-lg pt-1 leading-3">Sale of unique services in the form of NFT tokens</p>
+          </div>
+          <div class="bg-black w-32 h-32 border-2 border-white py-1 px-3 overflow-hidden
+                      group hover:border-[#695dff] cursor-pointer
+                      xs:w-40 xs:h-40
+                      md:w-48 md:h-48 md:py-2 md:px-4
+                      lg:w-60 lg:h-60 lg:py-3 lg:px-5">
+            <p class="text-3xl md:text-5xl lg:text-6xl font-bold group-hover:text-[#695dff]">4</p>
+            <p class="text-xs xs:text-sm lg:text-lg pt-1 leading-3">Creation and sale of your own NFT merch</p>
+          </div>
+          <div class="bg-white text-black w-32 h-32 border-2 border-white py-1 px-3 overflow-hidden
+                      group hover:border-[#695dff] cursor-pointer
+                      xs:w-40 xs:h-40
+                      md:w-48 md:h-48 md:py-2 md:px-4
+                      lg:w-60 lg:h-60 lg:py-3 lg:px-5">
+            <p class="text-3xl md:text-5xl lg:text-6xl font-bold group-hover:text-[#695dff]">5</p>
+            <p class="text-xs xs:text-sm lg:text-lg pt-1 leading-3">The ability to receive royalties is a percentage of the resale of each token between fans</p>
+          </div>
+          <div class="bg-black w-32 h-32 border-2 border-white py-1 px-3 overflow-hidden
+                      group hover:border-[#695dff] cursor-pointer
+                      xs:w-40 xs:h-40
+                      md:w-48 md:h-48 md:py-2 md:px-4 
+                      lg:w-60 lg:h-60 lg:py-3 lg:px-5">
+            <p class="text-3xl md:text-5xl lg:text-6xl font-bold group-hover:text-[#695dff]">6</p>
+            <p class="text-xs xs:text-sm lg:text-lg pt-1 leading-3">A new way of crowd-funding for freshmen in the music scene</p>
+          </div>
+  
         </div>
       </div>
         <div class="hidden md:block absolute top-0 right-0 scale-x-[-1] w-full h-full bg-no-repeat bg-right bg-contain z-0" style="background-image: url(./assets/images/vert-guitar_AdobeStock_1017066991.jpg)"></div>
-
+  
         <div class="hidden md:block absolute top-0 right-0  w-full h-full bg-no-repeat bg-right-top bg-contain hue-rotate-90 z-0" style="background-image: url(./assets/images/vert-guitar_AdobeStock_1017066991.jpg);"></div>
         
         <div class="md:hidden absolute w-full bottom-16 h-36 bg-no-repeat bg-top bg-contain z-0 scale-[2]" style="background-image: url(./assets/images/guitar_AdobeStock_101706699.jpg);"></div>
       
-      
-      
     </section>
 
-    <section id="fcis" data-scroll-section class="fcis relative w-full xs:flex xs:justify-between xs:pt-0 xs:h-full">
-      <div class="md:container md:pt-10">
-        <div class="flex flex-col w-full xs:w-1/2 xs:h-full xs:items-start xs:justify-center ">
-          <h3 class="text-4xl lg:text-7xl font-bold text-center lg:text-left mt-10 px-4">FansChain is</h3>
-          <p class="text-xs lg:text-xl font-bold py-6 px-4 ">Key to the ecosystem  of the platform. All calculations on the plaatform are carried out in it.</p>
-          <div class="flex flex-wrap justify-between z-10 px-4  lg:pt-8">
-            <div class="w-[120px] lg:w-1/2 py-4 pr-4">
-              <p class="flex items-center justify-center text-xl lg:text-2xl bg-black text-white w-8 h-8 lg:w-12 lg:h-12 border-2 border-black py-1 px-3 overflow-hidden">1</p>
-              <p class="text-xs lg:text-sm pt-4 leading-3">Exchange artist tokens for a platform token and trade it on the exchange.</p>
+    <section id="fcis" data-scroll-section class="fcis relative w-full h-full lg:h-screen min-h-[540px] lg:flex lg:justify-between lg:pt-0 ">
+      <div class="lg:container lg:pt-10">
+        <div class="flex flex-col w-full lg:w-1/2 lg:h-full lg:items-start lg:justify-center px-8">
+  
+          <h3 class="text-4xl font-bold text-center mt-10
+                    xs:text-6xl
+                    lg:text-left">FansChain is</h3>
+          <p class="text-xs font-bold py-6
+                    xs:text-base">
+            Key to the ecosystem  of the platform. All calculations on the platform are carried out in it
+          </p>
+  
+          <div class="flex flex-wrap justify-between z-10 px-4 py-8 lg:pt-8">
+  
+            <div class="w-1/2 py-4 lg:py-6 pr-4">
+              <p class="flex items-center justify-center text-xl bg-black text-white w-8 h-8 border-2 border-black py-1 px-3 overflow-hidden
+                        hover:border-[#695dff] hover:bg-[#695dff] cursor-pointer
+                        xs:text-2xl xs:w-12 xs:h-12
+                        md:text-3xl md:w-16 md:h-16
+                        xl:text-4xl xl:w-20 xl:h-20 ">1</p>
+              <p class="text-xs pt-4 leading-3 xs:text-sm md:text-base lg:text-lg">Exchange artist tokens for a platform token and trade it on the exchange</p>
             </div>
-            <div class="w-[120px] lg:w-1/2 py-4 pr-4">
-              <p class="flex items-center justify-center text-xl lg:text-2xl bg-white text-black w-8 h-8 lg:w-12 lg:h-12 border-2 border-black py-1 px-3 overflow-hidden">2</p>
-              <p class="text-xs lg:text-sm pt-4 leading-3">Buy a token with a bank card without linking a crypto wallet.</p>
+            <div class="w-1/2 py-4 lg:py-6 pr-4">
+              <p class="flex items-center justify-center text-xl bg-white text-black w-8 h-8 border-2 border-black py-1 px-3 overflow-hidden
+                        hover:border-[#695dff] hover:text-[#695dff] cursor-pointer
+                        xs:text-2xl xs:w-12 xs:h-12
+                        md:text-3xl md:w-16 md:h-16
+                        xl:text-4xl xl:w-20 xl:h-20">2</p>
+              <p class="text-xs xs:text-sm md:text-base lg:text-lg pt-4 leading-3">Buy a token with a bank card without linking a crypto wallet</p>
             </div>
-            <div class="w-[120px] lg:w-1/2 py-4 pr-4">
-              <p class="flex items-center justify-center text-xl lg:text-2xl bg-black text-white w-8 h-8 lg:w-12 lg:h-12 border-2 border-black py-1 px-3 overflow-hidden">3</p>
-              <p class="text-xs lg:text-sm pt-4 leading-3">Capitalize on the growing popularity of FansChain token.</p>
+            <div class="w-1/2 py-4 lg:py-6 pr-4">
+              <p class="flex items-center justify-center text-xl bg-black text-white w-8 h-8 border-2 border-black py-1 px-3 overflow-hidden
+                        hover:border-[#695dff] hover:bg-[#695dff] cursor-pointer
+                        xs:text-2xl xs:w-12 xs:h-12
+                        md:text-3xl md:w-16 md:h-16
+                        xl:text-4xl xl:w-20 xl:h-20">3</p>
+              <p class="text-xs xs:text-sm md:text-base lg:text-lg pt-4 leading-3">Capitalize on the growing popularity of FansChain token</p>
             </div>
-            <div class="w-[120px] lg:w-1/2 py-4 pr-4">
-              <p class="flex items-center justify-center text-xl lg:text-2xl bg-white text-black w-8 h-8 lg:w-12 lg:h-12 border-2 border-black py-1 px-3 overflow-hidden">4</p>
-              <p class="text-xs lg:text-sm pt-4 leading-3">Support your favorite artists by promoting their promotion by receiving bonuses from them.</p>
+            <div class="w-1/2 py-4 lg:py-6 pr-4">
+              <p class="flex items-center justify-center text-xl bg-white text-black w-8 h-8 border-2 border-black py-1 px-3 overflow-hidden
+                        hover:border-[#695dff] hover:text-[#695dff] cursor-pointer
+                        xs:text-2xl xs:w-12 xs:h-12
+                        md:text-3xl md:w-16 md:h-16
+                        xl:text-4xl xl:w-20 xl:h-20">4</p>
+              <p class="text-xs xs:text-sm md:text-base lg:text-lg pt-4 leading-3">Support your favorite artists by promoting their promotion by receiving bonuses from them</p>
             </div>
+  
           </div>
         </div>      
       </div>
-      <div class="xs:absolute xs:right-0 w-full xs:w-1/2 h-[392px] xs:h-full xs:min-h-[568px] bg-center xs:bg-right bg-cover xs:bg-contain bg-no-repeat" style="background-image: url(./assets/images/people_phone_with_map.png);"></div>
+      <div class="relative w-full h-[400px] lg:absolute lg:right-0 lg:w-1/2 lg:h-full overflow-hidden">
+        <div class="absolute right-0 w-4/5 md:w-3/5 lg:w-4/5 h-full bg-[#6457ff]"></div>
+        <div class="w-full min-h-[392px] bg-center bg-contain bg-no-repeat
+                    absolute left-0 h-full translate-x-[-70px]                  
+                    " style="background-image: url(./assets/images/people_phone_wobg.png);"></div>      
+      </div>
+           
+      
     </section>
     
     <section id="roadmap" data-scroll-section class="roadmap relative w-full pb-6">
       <div class="container">
-        <h3 class="relative text-5xl font-bold px-10 pt-10 lg:mt-16 z-10">Road map</h3>
-        <div class="q1 relative pb-2 border-b border-gray-300 md:flex md: md:pt-12  z-10">
+        <h3 class="relative text-5xl font-bold px-10 pt-10 z-10
+                  lg:mt-16 lg:text-7xl">Road map</h3>
+  
+        <div class="q1 relative pb-2 border-b border-gray-300 md:flex md:pt-12  z-10">
           <h4 class="p-10 md:pt-0 text-2xl text-gray-400">
             <span class="text-5xl font-bold text-[#695dff] pr-2">Q1</span>
             2021</h4>
-          <ul class="list-square text-[#695dff] px-8 ml-6 md:px-12 md:ml-12 ">
+          <ul class="list-square w-full text-[#695dff] text-xs xs:text-sm md:text-base  px-8 ml-6 md:px-12 md:ml-12 ">
             <li class="pb-4">
-              <span class="text-xs text-black ">
+              <span class="text-black ">
                 Development of legal documentation
               </span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Development of a marketing campaign and economic model</span>
+              <span class="text-black">Development of a marketing campaign and economic model</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Closing the seed-round</span>
+              <span class="text-black">Closing the seed-round</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Public sale</span>
+              <span class="text-black">Public sale</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">DEX listing</span>
+              <span class="text-black">DEX listing</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Launch of marketing and RP campaign in support of Kaif NFT marketplace</span>
+              <span class="text-black">Launch of marketing and RP campaign in support of Kaif NFT marketplace</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Development of smart contracts in the Polygon network</span>
+              <span class="text-black">Development of smart contracts in the Polygon network</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Development and release of MVP NFT marketplace</span>
+              <span class="text-black">Development and release of MVP NFT marketplace</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Release of the first NFT</span>
+              <span class="text-black">Release of the first NFT</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Marketing and PR campaign launch</span>
+              <span class="text-black">Marketing and PR campaign launch</span>
             </li>
           </ul>
         </div>
@@ -349,20 +478,20 @@
           <h4 class="py-8 px-10 md:pt-0 text-2xl text-gray-400">
             <span class="text-5xl font-bold text-[#695dff] pr-2">Q2</span>
             2021</h4>
-          <ul class="list-square text-[#695dff] px-8 ml-6 md:px-12 md:ml-12 ">
+          <ul class="list-square w-full text-[#695dff] text-xs xs:text-sm md:text-base px-8 ml-6 md:px-12 md:ml-12 ">
             <li class="pb-4">
-              <span class="text-xs text-black ">
+              <span class="text-black ">
                 Development of legal documentation
               </span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Development of a marketing campaign and economic model</span>
+              <span class="text-black">Development of a marketing campaign and economic model</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Closing the seed-round</span>
+              <span class="text-black">Closing the seed-round</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Public sale</span>
+              <span class="text-black">Public sale</span>
             </li>
           </ul>
         </div>
@@ -370,20 +499,20 @@
           <h4 class="py-8 px-10 md:pt-0 text-2xl text-gray-400">
             <span class="text-5xl font-bold text-[#695dff] pr-2">Q3</span>
             2021</h4>
-          <ul class="list-square text-[#695dff] px-8 ml-6 md:px-12 md:ml-12 ">
+          <ul class="list-square w-full text-[#695dff] text-xs xs:text-sm md:text-base px-8 ml-6 md:px-12 md:ml-12 ">
             <li class="pb-4">
-              <span class="text-xs text-black ">
+              <span class="text-black ">
                 Development of legal documentation
               </span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Development of a marketing campaign and economic model</span>
+              <span class="text-black">Development of a marketing campaign and economic model</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Closing the seed-round</span>
+              <span class="text-black">Closing the seed-round</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Public sale</span>
+              <span class="text-black">Public sale</span>
             </li>
           </ul>
         </div>
@@ -391,30 +520,30 @@
           <h4 class="py-8 px-10 md:pt-0 text-2xl text-gray-400">
             <span class="text-5xl font-bold text-[#695dff] pr-2">Q4</span>
             2021</h4>
-          <ul class="list-square text-[#695dff] px-8 ml-6 md:px-12 md:ml-12 ">
+          <ul class="list-square w-full text-[#695dff] text-xs xs:text-sm md:text-base px-8 ml-6 md:px-12 md:ml-12 ">
             <li class="pb-4">
-              <span class="text-xs text-black ">
+              <span class="text-black ">
                 Development of legal documentation
               </span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Development of a marketing campaign and economic model</span>
+              <span class="text-black">Development of a marketing campaign and economic model</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Closing the seed-round</span>
+              <span class="text-black">Closing the seed-round</span>
             </li>
             <li class="pb-4">
-              <span class="text-xs text-black">Public sale</span>
+              <span class="text-black">Public sale</span>
             </li>
           </ul>
         </div>
       </div>
       
-      <div class="hidden md:block absolute top-0 right-0 w-full h-full bg-no-repeat bg-center bg-cover grayscale opacity-70 z-0" style="background-image: url(./assets/images/map_418-4186521_sello-sol-uses-the-blockchain-protocol-called-gtime.jpg)"></div>
-      <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent"></div><div class="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
+      <div class="hidden md:block absolute top-0 right-0 w-full h-full bg-no-repeat bg-center bg-cover grayscale opacity-10 z-0" style="background-image: url(./assets/images/map_418-4186521_sello-sol-uses-the-blockchain-protocol-called-gtime.jpg)"></div>
+      <!-- <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent"></div><div class="absolute top-0 right-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent"></div> -->
     </section>
 
-    <!-- <section class="sect-7 relative w-full h-full md:h-screen overflow-hidden">
+    <!-- <section class="team relative w-full h-full md:h-screen overflow-hidden">
 
       <div class="md:flex md:items-center md:h-full md:w-full ">
         <div class="relative w-full md:w-1/2 h-[320px] md:h-full overflow-hidden z-0">
@@ -423,7 +552,7 @@
         <div class="controls md:container md:left-[50%] md:translate-x-[-50%] absolute bottom-0 w-full px-6 pb-6 contols flex justify-between items-center text-white z-10">
 
             <span class="left flex justify-center items-center w-12 h-12 border border-[#4a4a4a] hover:border-white cursor-pointer text-gray-500 hover:text-white">
-              <span class="iconify w-4 h-4" data-icon="bi:arrow-left"></span>
+              <span class="iconify w-4 h-4" data-data-icon="bi:arrow-left"></span>
             </span>          
             
             <span class="dots flex justify-around">
@@ -435,7 +564,7 @@
             </span>
 
             <span class="right flex justify-center items-center w-12 h-12 border border-[#4a4a4a] hover:border-white cursor-pointer text-gray-500 hover:text-white">
-              <span class="iconify w-4 h-4  " data-icon="bi:arrow-right"></span>
+              <span class="iconify w-4 h-4  " data-data-icon="bi:arrow-right"></span>
             </span>
             
         </div>
@@ -451,44 +580,57 @@
     </section> -->
 
     <section id="exclusive" data-scroll-section class="exclusive relative w-full h-full md:h-screen md:min-h-[768px] flex flex-wrap overflow-hidden">
-      
+    
       <div class="relative order-last md:order-none z-10 flex flex-col justify-center w-full md:w-1/2">
         
-        <h3 class="hidden md:block absolute top-32 right-0 text-3xl xs:text-[7.2rem] font-bold translate-x-[14rem] whitespace-nowrap ">Be the <span class="text-white">first</span></h3>        
-        
-
-        <div class="w-full md:w-[336px] md:ml-auto">
-          <p class="hidden md:block font-noto-bold text-sm leading-7 tracking-tight pt-[65%]">on the platform and get exclusive terms of cooperation.</p>
-
-          <p class="text-sm pt-8 px-4 md:pl-0 text-center md:text-left leading-7 tracking-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, ut voluptatem voluptas dolor incidunt hic voluptate esse dolorem nostrum ipsum, in itaque culpa, aperiam iure doloremque minus repellat neque accusantium!</p><br>
-          <p class="text-sm px-4 md:pl-0 text-center md:text-left leading-7 tracking-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, ut voluptatem voluptas dolor incidunt hic voluptate esse dolorem nostrum ipsum, in itaque culpa, aperiam iure doloremque minus repellat neque accusantium!</p>
-          <button class="flex w-fit mx-auto md:mx-0 nowrap items-center bg-black mt-12 py-5 px-10 text-white cursor-pointer  hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">Join to FansChain<span class="iconify ml-6 w-6 h-6  animate-bouncel" data-icon="bi:arrow-right"></span>
+        <h3 class="absolute right-0 font-bold whitespace-nowrap
+                  hidden md:block 
+                  xs:top-[2%] 
+                  md:text-[7.2rem] md:translate-x-[15.5rem] md:top-[3%]
+                  lg:text-[7.2rem] lg:translate-x-[15.5rem] lg:top-[6%]
+                  xl:text-[11.4rem] xl:translate-x-[24.4rem] xl:top-[10%]">Be the <span class="text-white">first</span></h3>
+  
+        <div class="w-full md:w-[360px] md:ml-auto md:pr-6 xl:w-[570px]">
+          <p class="hidden md:block font-bold text-sm leading-7 tracking-tight
+                    md:tex-xl md:pt-[35%]
+                    lg:pt-[50%]
+                    xl:text-3xl xl:pt-[45%]">on the platform and get exclusive terms of cooperation.</p>
+          <p class="text-sm pt-10 px-4 text-center leading-7 tracking-tight
+                    md:pl-0 md:text-left xl:text-base md:leading-8">FansChain Platform is under active development</p><br>
+          <p class="text-sm px-4 text-center leading-7 tracking-tight
+                    md:pl-0 md:text-left xl:text-base md:leading-8">Get in the among the first platform and get exclusive terms of cooperation</p>
+          <button class="flex w-fit mx-auto nowrap items-center bg-black my-10 py-5 px-10 text-white cursor-pointer md:mx-0
+                        hover:shadow-xl hover:shadow-[#695dff]/25 hover:scale-[1.01] duration-100">Join FansChain<span class="iconify ml-6 w-6 h-6 animate-bouncel" data-icon="bi:arrow-right"></span>
           </button>
         </div>
         
       </div>
       
       <div class="relative flex w-3/4 ml-auto xs:w-3/5 md:w-1/2 h-[400px] md:h-full bg-center bg-no-repeat bg-cover z-0" style="background-image: url('./assets/images/guitar-man_shutterstock_775135948.jpg')">
-        <h3 class="xs:hidden absolute top-[50%] translate-y-[-50%] text-5xl left-0 translate-x-[-3.8rem] 
+  
+        <h3 class="xs:hidden absolute top-[50%] translate-y-[-50%] text-5xl left-0 translate-x-[-4.1rem] 
         font-bold whitespace-nowrap z-10">Be <span class="text-white">the first</span></h3>
-        <h3 class="hidden xs:block md:hidden absolute top-[50%] translate-y-[-50%] text-7xl left-0 translate-x-[-13.2rem] 
+  
+        <h3 class="hidden xs:block md:hidden absolute top-[50%] translate-y-[-50%] text-6xl left-0 translate-x-[-12rem] 
         font-bold whitespace-nowrap z-10">Be the <span class="text-white">first</span></h3>
-        <p class="hidden xs:block md:hidden absolute w-1/2 top-[60%] translate-x-[-13rem] font-noto-bold text-sm leading-7 tracking-tight pb-6 pr-6">on the platform and get exclusive terms of cooperation.</p>
+  
+        <p class="hidden xs:block md:hidden absolute w-1/2 top-[60%] translate-x-[-11.8rem] text-sm font-semibold leading-7 tracking-tight pb-6 pr-8">on the platform and get exclusive terms of cooperation.</p>
       </div>
-   
+    
     </section>
     
     <footer data-scroll-section class="relative container flex flex-col">
-      <div data-scroll class="mobile-footer lg:hidden px-6">
-
-        <h3 class="font-dewi-expanded font-black text-center mt-16 pb-8"> 
+      <div class="mobile-footer lg:hidden px-6">
+  
+        <h3 class="font-dewi-expanded font-black text-xl text-center mt-16 pb-8"> 
           <a href="/" alt="FansChain Homepage">
             FANSCHAIN
           </a>
         </h3>
         
         <div class="flex">
-          <nav class="w-full px-6 font-dewi text-xs font-black leading-7">
+          <nav class="w-full px-6 text-xs font-semibold tracking-wide leading-7
+                      xs:text-sm xs:tracking-normal xs:leading-8">
             <ul class="lg:flex lg:justify-evenly gap-3">
               <li>
                 <a href="#about" alt="About FansChain">
@@ -542,25 +684,25 @@
             </ul>
           </div>
         </div>
-
-        <div class="copyright flex justify-center py-10 text-[.6rem] lg:text-xs lg:py-0">
-          <a href="#" class="mr-8 font-bold text-black/40 border-b border-black/20 hover:border-[#695dff] hover:text-[#695dff] cursor-pointer">POLICY</a>
-          <a href="mailto:info@fanschain.com" class="font-black hover:text-[#695dff]">INFO@FANSCHAIN.COM</a>
+  
+        <div class="copyright flex justify-center py-10 text-[.8rem] lg:text-xs lg:py-0">
+          <a href="#" class="mr-8 font-semibold text-black/40 border-b border-black/20 hover:border-[#695dff] hover:text-[#695dff] cursor-pointer">POLICY</a>
+          <a href="mailto:info@fanschain.com" class="font-bold hover:text-[#695dff]">INFO@FANSCHAIN.COM</a>
         </div>
-
+  
       </div>
-
-
-
-      <div data-scroll class="full-footer hidden lg:flex items-center justify-evenly px-6 pt-16 pb-10">
-
-        <h3 class="font-dewi-expanded font-black text-center"> 
+  
+  
+  
+      <div class="full-footer hidden lg:flex items-center justify-evenly px-6 pt-16 pb-10">
+  
+        <h3 class="font-dewi-expanded font-black text-xl text-center"> 
           <a href="/" alt="FansChain Homepage">
             FANSCHAIN
           </a>
         </h3>
         
-        <nav class="w-full font-dewi text-xs font-black leading-7">
+        <nav class="w-full text-sm font-semibold leading-7">
           <ul class="lg:flex lg:justify-evenly ">
             <li>
               <a href="#about" alt="About FansChain">
@@ -594,16 +736,14 @@
             </li>
           </ul>
         </nav>
-          
-        </div> 
       </div>
       <div class="hidden lg:flex items-center justify-center gap-6 px-6 pb-6">
-
-        <div class="copyright flex justify-center py-10 text-[.6rem] lg:text-xs lg:py-0">
+  
+        <div class="copyright flex justify-center py-10 text-[.8rem] lg:text-xs lg:py-0">
           <a href="#" class="mr-8 font-bold text-black/40 border-b border-black/20 hover:border-[#695dff] hover:text-[#695dff] cursor-pointer">POLICY</a>
-          <a href="mailto:info@fanschain.com" class="font-black hover:text-[#695dff]">INFO@FANSCHAIN.COM</a>
+          <a href="mailto:info@fanschain.com" class="font-semibold hover:text-[#695dff]">INFO@FANSCHAIN.COM</a>
         </div>
-
+  
         <div class="flex items-center justify-center">
           <ul class="flex flex-col lg:flex-row">
             <li class="w-6 h-6 lg:w-8 lg:h-8">
@@ -625,7 +765,7 @@
         </div>        
         
       </div>      
-
+  
     </footer>
   </main>
 
